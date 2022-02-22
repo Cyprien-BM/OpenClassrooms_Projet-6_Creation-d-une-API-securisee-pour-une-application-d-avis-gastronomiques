@@ -7,8 +7,8 @@ const inputValidator = require('../middleware/inputValidator')
 
 router.get('/', saucesControllers.getSauces);
 router.get('/:id', auth, saucesControllers.getOneSauces);
-router.post('/', auth, multer, saucesControllers.createSauce);
-router.put('/:id', auth, multer, inputValidator, saucesControllers.modifySauce);
+router.post('/', auth, inputValidator,  multer, saucesControllers.createSauce);
+router.put('/:id', auth, inputValidator, multer, saucesControllers.modifySauce);
 router.delete('/:id', auth, saucesControllers.deleteSauce);
 router.post('/:id/like', auth, saucesControllers.like);
 
