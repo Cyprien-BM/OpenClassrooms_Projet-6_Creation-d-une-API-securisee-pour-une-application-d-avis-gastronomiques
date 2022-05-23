@@ -8,7 +8,7 @@ passwordSchema
   .has().uppercase()                             
   .has().lowercase()                              
   .has().digits(2)                                
-  .has(/[ !"#$%&'()*+,-./:;<=>?@\[\]^_`{|}~]/g)
+  .has(/[\\ !"#$%&'()*+,-./:;<=>?@\[\]^_`{|}~]/g)
   .not(/<script>|<script\/>|SELECT|FROM|UPDATE|DELETE/g);
 
 module.exports = passwordSchema;
